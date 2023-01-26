@@ -30,7 +30,7 @@
             </a>
         </nav>
     {else}
-        <h2>Actor List</h2>
+        <h2>Actors List</h2>
     {/if}
 </header>
 <main>
