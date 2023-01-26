@@ -54,9 +54,5 @@ function clearNodes(element) {
     }
 }
 
-try {
-    getActors('');
-    document.getElementById('searchInput').addEventListener("keyup", filterByQuery);
-} catch (e) {
-    console.log(e);
-}
+getActors('');
+document.getElementById('searchInput').addEventListener("keyup", filterByQuery);

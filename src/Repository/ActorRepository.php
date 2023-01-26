@@ -54,8 +54,9 @@ class ActorRepository
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getActorsJson(string $searchString): void
+    public function getActorsJson(string $searchString): string
     {
+
         $searchQuery = "%$searchString%";
         if (isset($searchString) && strlen($searchString) >= 1) {
             $query = "SELECT first_name, last_name, id FROM actor 
@@ -64,9 +65,9 @@ class ActorRepository
                   ORDER BY last_name, first_name ;";
             $statement = $this->db()->prepare($query);
             $statement->execute(['searchQuery' => stripslashes($searchQuery)]);
-            echo json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
+            return json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
         } else {
-            echo json_encode($this->getAll());
+            return json_encode($this->getAll());
         }
     }
 }

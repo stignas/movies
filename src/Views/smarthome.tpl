@@ -28,17 +28,12 @@
                 <span>Home</span>
             </a>
         </nav>
-
-
 </header>
 <main>
         <div class='actors-table'>
-            <ul id="actors-list">
-            </ul>
+            <ul id="actors-list"></ul>
         </div>
-
-        <div class="not-found">
-        </div>
+        <div class="not-found"></div>
 </main>
 <footer>
     2023 &COPY Ignas

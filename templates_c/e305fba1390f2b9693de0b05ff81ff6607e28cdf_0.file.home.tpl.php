@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-01-25 20:39:53
+/* Smarty version 4.3.0, created on 2023-01-26 22:22:04
   from 'C:\xampp\htdocs\paskaitos\SQL\38p\movies\src\Views\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63d18589ddcf30_45950776',
+  'unifunc' => 'content_63d2eefc647f27_11017206',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e305fba1390f2b9693de0b05ff81ff6607e28cdf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\paskaitos\\SQL\\38p\\movies\\src\\Views\\home.tpl',
-      1 => 1674675592,
+      1 => 1674764264,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d18589ddcf30_45950776 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d2eefc647f27_11017206 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -32,7 +32,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Movie Database</title>
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_147273022463d18589dcf135_20631901', "css");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_111925740063d2eefc480a81_56190126', "css");
 ?>
 
 
@@ -54,7 +54,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_147273022463d18589
             </a>
         </nav>
     <?php } else { ?>
-        <h2>Actor List</h2>
+        <h2>Actors List</h2>
     <?php }?>
 </header>
 <main>
@@ -92,12 +92,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </html>
 <?php }
 /* {block "css"} */
-class Block_147273022463d18589dcf135_20631901 extends Smarty_Internal_Block
+class Block_111925740063d2eefc480a81_56190126 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'css' => 
   array (
-    0 => 'Block_147273022463d18589dcf135_20631901',
+    0 => 'Block_111925740063d2eefc480a81_56190126',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

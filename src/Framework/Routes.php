@@ -7,6 +7,7 @@ use Exception;
 use movies\Controllers\ActorController;
 use movies\Controllers\ErrPageController;
 use movies\Controllers\MovieController;
+use movies\Repository\ActorRepository;
 
 class Routes
 {
@@ -26,11 +27,13 @@ class Routes
          * @var ErrPageController $errPageController
          * @var ActorController $actorController
          * @var MovieController $movieController
+         * @var ActorRepository $actorRepository
          */
 
         $errPageController = $this->di->get('movies\Controllers\ErrPageController');
         $actorController = $this->di->get('movies\Controllers\ActorController');
         $movieController = $this->di->get('movies\Controllers\MovieController');
+        $actorRepository = $this->di->get('movies\Repository\ActorRepository');
 
         switch ($route) {
             case '/':
@@ -48,10 +51,10 @@ class Routes
                 $movieController->displayMoviePage((int)$routeArray[2]);
                 break;
             case '/smart':
-                require(__DIR__ . '/../Views/smarthome.tpl');
+                $actorController->displaySmartSearch();
                 break;
             case '/json':
-                $actorController->getActorsJson($request);
+                $actorController->jsEndPoint($request['search_text']);
                 break;
             default:
                 $errPageController->display();

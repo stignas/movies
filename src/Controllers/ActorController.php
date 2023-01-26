@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace movies\Controllers;
 
 use movies\Framework\DiContainer;
-use movies\Framework\Validator;
 use movies\Repository\ActorRepository;
 use movies\Repository\MovieRepository;
 use Smarty;
@@ -14,7 +13,6 @@ class ActorController
 {
     public function __construct(private readonly DiContainer $di)
     {
-
     }
 
     /**
@@ -37,7 +35,6 @@ class ActorController
     /**
      * @throws SmartyException
      * @throws Exception
-     *
      */
     public function displaySearchResults(array $request): void
     {
@@ -63,7 +60,7 @@ class ActorController
     {
         /**
          * @var ActorRepository $actor
-         * @var  MovieRepository $actorMovieList
+         * @var MovieRepository $actorMovieList
          */
         $previous = "javascript:history.back()";
         $actor = $this->di->get('movies\Repository\ActorRepository')->getById($id);
@@ -76,12 +73,21 @@ class ActorController
     /**
      * @throws SmartyException
      */
-    public function getActorsJson($request): void
+    public function displaySmartSearch(): void
+    {
+        $smarty = new Smarty();
+        $smarty->display(__DIR__ . '/../Views/smarthome.tpl');
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function jsEndPoint(string $searchText): void
     {
         /**
-         * @var ActorRepository $actors
+         * @var ActorRepository $actorRepository
          */
-        $this->di->get('movies\Framework\Validator')->validateSearchText($request['search_text']);
-        $actors = $this->di->get('movies\Repository\ActorRepository')->getActorsJson($request['search_text']);
+        $actorRepository = $this->di->get('movies\Repository\ActorRepository');
+        echo $actorRepository->getActorsJson($searchText);
     }
 }
