@@ -1,0 +1,17 @@
+{
+    "name": "statk/movies",
+    "require": {
+        "smarty/smarty": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "movies\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ignas",
+            "email": "statkus.online@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,188 @@
+:root {
+    --main-color: rgb(176, 224, 176);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 10%;
+    padding: 0 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+main {
+    height: 80%;
+    overflow-y: auto;
+    background-color: gray;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+h2 {
+    font-family: Algerian, sans-serif;
+    column-span: all;
+    text-align: center;
+    color: gray;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10%;
+    text-align: center;
+    background-color: var(--main-color);
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover,
+a:active {
+    color: var(--main-color);
+}
+
+.button {
+    color: gray
+}
+
+.button:hover {
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.get-at {
+    display: flex;
+    gap: 3rem;
+
+}
+
+hr {
+    border: 1px solid var(--main-color);
+    height: auto;
+}
+
+h3 {
+    color: gray;
+}
+
+.wrapper h2 {
+    font-size: 3rem;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 1rem;
+}
+
+.movie-info div {
+    padding: 0.5rem;
+    margin: 1rem auto;
+
+}
+
+.params {
+    display: flex;
+    justify-content: center;
+}
+
+.params li {
+    font-style: italic;
+}
+
+.params li:not(:first-child)::before {
+    content: "\2022";
+    color: var(--main-color);
+    padding: 0 1rem;
+}
+
+.description {
+    text-indent: 3rem;
+    height: 40%;
+    color: gray;
+    font-weight: 500;
+    font-style: oblique;
+    box-shadow: 2px 2px 20px var(--main-color),
+    -2px -2px 20px var(--main-color);
+    text-wrap: normal;
+}
+
+.featuring-actors {
+    font-size: 1.3rem;
+    color: gray;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px 3px var(--main-color);
+}
+
+.special-features {
+    text-align: center;
+    margin: 0 auto;
+    border-top: 1px dashed var(--main-color);
+    border-bottom: 1px dashed var(--main-color);
+}
+
+.movie-info h3 {
+    text-align: center;
+}
+
+.not-available {
+    color: pink;
+}
+
+.stores {
+
+}
+
+.stores li {
+    line-height: 1.5;
+    text-align: center;
+}
+
+.separator {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.separator::before {
+    content: "\2022";
+
+}
+
+

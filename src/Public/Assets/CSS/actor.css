@@ -1,0 +1,119 @@
+:root {
+    --main-color: rgb(176, 224, 176);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 10%;
+    padding: 0 2rem;
+}
+
+header h2 {
+    font-family: Algerian, sans-serif;
+    column-span: all;
+    text-align: center;
+    color: gray;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80%;
+    margin: 0;
+    background-color: gray;
+}
+
+.actor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-right: 1px solid var(--main-color);
+    background-color: white;
+}
+.actor-info-block {
+    text-align: center;
+    margin: 0;
+
+}
+
+.actor-img {
+    height: 200px;
+    width: 200px;
+}
+
+.actor-film-list {
+    overflow-y: auto;
+    margin: 0;
+    padding: 2rem;
+    background-color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10%;
+    text-align: center;
+    background-color: var(--main-color);
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover,
+a:active {
+    color: var(--main-color);
+}
+
+.button {
+    color: gray
+}
+
+.button:hover {
+    color: black;
+}
+
+.movie-title {
+    margin: 0.5rem 0;
+}
+
+.release-year {
+    color: var(--main-color);
+    margin: 0;
+}
+
+.description {
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.actor-name {
+    font-family: Algerian, sans-serif;
+    color: var(--main-color);
+    margin: 0.5rem 0;
+}

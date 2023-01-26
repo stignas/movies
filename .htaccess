@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /paskaitos/SQL/38p/movies/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php [QSA,L]
+RedirectMatch 403 ^/paskaitos/SQL/38p/movies/src/.*$
+RedirectMatch 403 ^/paskaitos/SQL/38p/movies/vendor/.*$

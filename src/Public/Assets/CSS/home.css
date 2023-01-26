@@ -1,0 +1,122 @@
+:root {
+    --main-color: rgb(176, 224, 176);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 10%;
+    padding: 0 2rem;
+}
+
+header h2 {
+    font-family: Algerian, sans-serif;
+    column-span: all;
+    text-align: center;
+    color: gray;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.search-bar {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+main {
+    height: 80%;
+    overflow-y: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+li {
+    text-align: center;
+}
+.actors-table {
+    margin: 0 auto;
+    padding: 1rem;
+    column-count: 5;
+    column-rule: thin solid var(--main-color);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10%;
+    text-align: center;
+    background-color: var(--main-color);
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover,
+a:active {
+    color: var(--main-color);
+}
+
+.button {
+  color: gray
+}
+
+.button:hover {
+ color: black;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: none;
+}
+
+button[type=submit] {
+    border-radius: 0.25rem;
+    height: inherit;
+    padding: 0.5rem;
+    border: none;
+    transition: all 150ms ease-in;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    box-shadow: 2px 2px 5px gray,
+                -2px -2px 5px gray;
+}
+
+button[type=submit]:active {
+    box-shadow: 2px 2px 5px gray inset,
+    -2px -2px 5px gray inset;
+}
+
+.not-found {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3rem;
+    color: pink;
+}
+
